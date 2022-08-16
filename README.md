@@ -15,6 +15,8 @@ JORA functionality:
 * Screenshot of the desktop and webcam (if available).
 
 * Obtaining PC characteristics.
+
+* Sending data archives via telegram
 ---
 ### The work process is the following.
 
