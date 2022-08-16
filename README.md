@@ -34,6 +34,9 @@ which is located in the command to create file exe.txt.
 
 The result is an exe file ready to work.
 
+When you enter / start vs collect the data you need
+
+When entering /screenshot we take the result of the keylogger, recording video and audio
 ---
 ### The work process is the following.
 
