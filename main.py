@@ -31,8 +31,8 @@ from threading import Thread
 
 
 Telegram = True    # Send data to telegram or not
-TOKEN = "5422702933:AAGoMlBXP-xqlfdlNt4rnSvAOjuh7NIqWZI"    # TOKEN for bot
-MYID = 1703777321   # your telegram id
+TOKEN = "TOKEN"    # TOKEN for bot
+MYID = 1   # your telegram id
 
 
 def remove_func():
