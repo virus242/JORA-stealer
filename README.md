@@ -24,7 +24,7 @@ JORA functionality:
 
 You need to pull the project fromthe repository. 
 
-Fill in the details of your telegram. 
+Fill in the details of your telegram (TOKEN bot and your chat id)
 
 Install all libraries from requirements.txt , start the virtual environment and run the command
 
