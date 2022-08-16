@@ -2,6 +2,8 @@ JORA
 ===
 ### is an interesting and multifunctional styler created for educational purposes
 
+#### it is interesting because it remains in the system after the machine is turned off, thereby allowing you to continue taking data from both the keylogger and recording (video and audio)
+
 JORA functionality:
 ---
 * Taking passwords and cookies from Google Chrome and Mozilla Firefox.
