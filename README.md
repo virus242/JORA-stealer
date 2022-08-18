@@ -18,6 +18,8 @@ JORA functionality:
 
 * Obtaining PC characteristics.
 
+* Getting information about connected Wi-Fi networks, including passwords
+
 * Sending data archives via telegram
 ---
 ## USE
@@ -50,3 +52,9 @@ Simultaneously with this, the recording of the keylogger and the recording start
 we get the result of their work.
 
 After the completion of each of the commands, the data is deleted, except for video and audio, they simply overwrite the existing ones
+
+---
+## Warning
+
+--- 
+### An error may occur when you re-enter the "/start" command.

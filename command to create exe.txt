@@ -1,1 +1,1 @@
-pyinstaller --onefile -w --icon=imgwindows-security-new.png main.py
+pyinstaller --onefile -w --icon=img\windows-security-new.png main.py

